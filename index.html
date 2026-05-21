@@ -117,65 +117,58 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%;display:block;" aria-hidden="true">
               <defs>
                 <linearGradient id="as-sky" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%"   stop-color="#0e1630"/>
-                  <stop offset="30%"  stop-color="#142848"/>
-                  <stop offset="58%"  stop-color="#1a4e72"/>
-                  <stop offset="75%"  stop-color="#9a5a18"/>
-                  <stop offset="88%"  stop-color="#d4820c"/>
-                  <stop offset="100%" stop-color="#e89a18"/>
+                  <stop offset="0%"   stop-color="#1c3860"/>
+                  <stop offset="28%"  stop-color="#2e5c9a"/>
+                  <stop offset="54%"  stop-color="#c85850"/>
+                  <stop offset="72%"  stop-color="#e87830"/>
+                  <stop offset="86%"  stop-color="#f0a020"/>
+                  <stop offset="100%" stop-color="#f8c030"/>
                 </linearGradient>
                 <linearGradient id="as-water" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%"   stop-color="#1e5878"/>
-                  <stop offset="35%"  stop-color="#0e3050"/>
-                  <stop offset="100%" stop-color="#050d1a"/>
+                  <stop offset="0%"   stop-color="#5090b8"/>
+                  <stop offset="35%"  stop-color="#2a6080"/>
+                  <stop offset="100%" stop-color="#0e2840"/>
                 </linearGradient>
                 <radialGradient id="as-sun" cx="50%" cy="90%" r="90%">
-                  <stop offset="0%"   stop-color="#f8d840" stop-opacity="0.6"/>
-                  <stop offset="40%"  stop-color="#e89018" stop-opacity="0.35"/>
-                  <stop offset="100%" stop-color="#c86810" stop-opacity="0"/>
+                  <stop offset="0%"   stop-color="#fce840" stop-opacity="0.95"/>
+                  <stop offset="35%"  stop-color="#f09028" stop-opacity="0.65"/>
+                  <stop offset="100%" stop-color="#e07018" stop-opacity="0"/>
                 </radialGradient>
                 <linearGradient id="as-refl" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%"   stop-color="#f0c030" stop-opacity="0.9"/>
-                  <stop offset="50%"  stop-color="#d07010" stop-opacity="0.4"/>
-                  <stop offset="100%" stop-color="#0e3050" stop-opacity="0"/>
+                  <stop offset="0%"   stop-color="#f8e040" stop-opacity="1.0"/>
+                  <stop offset="45%"  stop-color="#f09030" stop-opacity="0.6"/>
+                  <stop offset="100%" stop-color="#2a6080" stop-opacity="0"/>
                 </linearGradient>
               </defs>
 
               <!-- Sky -->
               <rect x="0" y="0" width="400" height="500" fill="url(#as-sky)"/>
 
-              <!-- Aurora ribbons (faint) -->
-              <path d="M0,80 Q80,50 160,72 Q240,94 320,58 Q365,42 400,68 L400,108 Q365,82 320,98 Q240,134 160,112 Q80,90 0,120 Z" fill="#00b880" opacity="0.07"/>
-              <path d="M0,60 Q120,30 220,52 Q310,74 400,44 L400,84 Q310,114 220,92 Q120,70 0,100 Z" fill="#7030c0" opacity="0.05"/>
+              <!-- Aurora ribbons (very faint — just a hint) -->
+              <path d="M0,80 Q80,50 160,72 Q240,94 320,58 Q365,42 400,68 L400,108 Q365,82 320,98 Q240,134 160,112 Q80,90 0,120 Z" fill="#00b880" opacity="0.04"/>
 
-              <!-- Stars -->
-              <circle cx="48"  cy="28" r="1.3" fill="#fff" opacity="0.85"/>
-              <circle cx="112" cy="15" r="1.0" fill="#fff" opacity="0.70"/>
-              <circle cx="178" cy="38" r="0.9" fill="#fff" opacity="0.60"/>
-              <circle cx="220" cy="12" r="1.2" fill="#fff" opacity="0.80"/>
-              <circle cx="268" cy="32" r="0.8" fill="#fff" opacity="0.65"/>
-              <circle cx="340" cy="20" r="1.1" fill="#fff" opacity="0.75"/>
-              <circle cx="380" cy="46" r="0.9" fill="#fff" opacity="0.60"/>
-              <circle cx="76"  cy="58" r="0.7" fill="#fff" opacity="0.50"/>
-              <circle cx="308" cy="56" r="0.8" fill="#fff" opacity="0.55"/>
-              <circle cx="155" cy="68" r="0.7" fill="#fff" opacity="0.45"/>
+              <!-- Stars (faint — it's dusk, not night) -->
+              <circle cx="48"  cy="28" r="1.3" fill="#fff" opacity="0.30"/>
+              <circle cx="220" cy="12" r="1.2" fill="#fff" opacity="0.28"/>
+              <circle cx="340" cy="20" r="1.1" fill="#fff" opacity="0.25"/>
+              <circle cx="112" cy="15" r="1.0" fill="#fff" opacity="0.22"/>
 
               <!-- Sun glow halo at horizon -->
-              <ellipse cx="200" cy="272" rx="100" ry="64" fill="url(#as-sun)"/>
+              <ellipse cx="200" cy="272" rx="120" ry="80" fill="url(#as-sun)"/>
 
               <!-- Sun arc (half disc rising at horizon) -->
               <path d="M166,272 A34,34 0 0 1 234,272 Z" fill="#f8e040"/>
               <path d="M170,272 A30,30 0 0 1 230,272 Z" fill="#fce860"/>
 
               <!-- Distant rolling forested hills -->
-              <path d="M0,254 Q24,238 48,250 Q68,234 92,246 Q114,230 140,244 Q162,230 188,242 Q210,228 236,242 Q258,230 282,244 Q306,230 332,246 Q354,232 378,248 Q390,240 400,250 L400,275 L0,275 Z" fill="#183a22"/>
+              <path d="M0,254 Q24,238 48,250 Q68,234 92,246 Q114,230 140,244 Q162,230 188,242 Q210,228 236,242 Q258,230 282,244 Q306,230 332,246 Q354,232 378,248 Q390,240 400,250 L400,275 L0,275 Z" fill="#1e4a2a"/>
 
               <!-- Lake water -->
               <rect x="0" y="268" width="400" height="232" fill="url(#as-water)"/>
 
               <!-- Sun reflection pillar on water -->
-              <path d="M183,268 L217,268 L228,314 L210,338 L200,350 L190,338 L172,314 Z" fill="url(#as-refl)" opacity="0.85"/>
-              <ellipse cx="200" cy="268" rx="30" ry="5.5" fill="#e89018" opacity="0.50"/>
+              <path d="M180,268 L220,268 L235,320 L214,348 L200,362 L186,348 L165,320 Z" fill="url(#as-refl)" opacity="1.0"/>
+              <ellipse cx="200" cy="268" rx="38" ry="7" fill="#f8d030" opacity="0.70"/>
 
               <!-- Water ripple lines -->
               <path d="M108,292 Q130,289 152,292" fill="none" stroke="#2a6888" stroke-width="1.2" opacity="0.40"/>
@@ -186,7 +179,7 @@
               <path d="M252,332 Q292,327 332,332" fill="none" stroke="#163848" stroke-width="1.0" opacity="0.25"/>
 
               <!-- Near-shore treeline -->
-              <path d="M0,262 Q22,250 44,262 Q60,248 80,260 Q96,246 118,258 Q136,244 158,256 Q174,244 196,256 Q216,244 238,258 Q256,246 278,260 Q298,246 320,260 Q340,248 362,260 Q380,250 400,262 L400,282 L0,282 Z" fill="#0c1e12"/>
+              <path d="M0,262 Q22,250 44,262 Q60,248 80,260 Q96,246 118,258 Q136,244 158,256 Q174,244 196,256 Q216,244 238,258 Q256,246 278,260 Q298,246 320,260 Q340,248 362,260 Q380,250 400,262 L400,282 L0,282 Z" fill="#102816"/>
 
               <!-- Canoe on water (mid-distance) -->
               <path d="M155,288 Q200,281 245,288 L239,296 Q200,290 161,296 Z" fill="#060c10"/>
@@ -201,14 +194,14 @@
               <path d="M328,304 Q331,299 333,302" fill="none" stroke="#1a3040" stroke-width="1.2"/>
 
               <!-- Left foreground pine silhouettes -->
-              <g fill="#040e06">
+              <g fill="#0c1e10">
                 <path d="M-18,500 L8,500 L28,418 L33,442 L50,374 L55,400 L72,316 L89,400 L94,374 L111,442 L106,418 L130,500 L118,500 Z"/>
                 <path d="M-28,500 L-10,500 L14,436 L18,456 L34,392 L50,456 L54,436 L74,500 Z"/>
                 <path d="M58,500 L70,500 L80,462 L84,474 L94,446 L104,474 L108,462 L120,500 Z"/>
               </g>
 
               <!-- Right foreground pine silhouettes -->
-              <g fill="#040e06">
+              <g fill="#0c1e10">
                 <path d="M270,500 L314,500 L330,426 L335,450 L348,382 L361,450 L366,426 L384,500 L372,500 Z"/>
                 <path d="M326,500 L354,500 L368,440 L372,460 L385,406 L398,460 L402,440 L420,500 Z"/>
                 <path d="M278,500 L292,500 L300,464 L304,476 L312,448 L320,476 L324,464 L336,500 Z"/>
