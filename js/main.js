@@ -247,4 +247,98 @@
   const yearEl = document.getElementById('footerYear');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* =====================================================
+     QUOTE ROTATOR — Minnesota care philosophy
+     ===================================================== */
+  const QUOTES = [
+    'Like Minnesota\u2019s 10,000 lakes \u2014 calm, clear, and always there for you.',
+    'We believe every season of life deserves dignity and quiet grace.',
+    'Rooted in the north. Devoted to the people who call it home.',
+    'In the hardest winters, Minnesotans look out for each other. We always have.',
+    'Where the birches grow and the waters run deep \u2014 so does our care.',
+  ];
+
+  const quoteTextEl = document.getElementById('quoteText');
+  const quoteDotsEl = document.getElementById('quoteDots');
+  let quoteIndex = 0;
+  let quoteTimer = null;
+
+  function buildQuoteDots() {
+    if (!quoteDotsEl) return;
+    quoteDotsEl.innerHTML = '';
+    QUOTES.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'quote-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Quote ' + (i + 1));
+      dot.addEventListener('click', () => goToQuote(i));
+      quoteDotsEl.appendChild(dot);
+    });
+  }
+
+  function updateDots(idx) {
+    if (!quoteDotsEl) return;
+    quoteDotsEl.querySelectorAll('.quote-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === idx);
+    });
+  }
+
+  function goToQuote(idx) {
+    if (!quoteTextEl) return;
+    quoteTextEl.classList.add('fading');
+    setTimeout(() => {
+      quoteIndex = idx;
+      quoteTextEl.textContent = QUOTES[quoteIndex];
+      quoteTextEl.classList.remove('fading');
+      updateDots(quoteIndex);
+    }, 600);
+  }
+
+  function advanceQuote() {
+    goToQuote((quoteIndex + 1) % QUOTES.length);
+  }
+
+  function startQuoteTimer() {
+    quoteTimer = setInterval(advanceQuote, 5000);
+  }
+
+  if (quoteTextEl) {
+    buildQuoteDots();
+    quoteTextEl.textContent = QUOTES[0];
+    startQuoteTimer();
+
+    // Pause rotation on hover
+    const strip = document.querySelector('.quote-strip');
+    if (strip) {
+      strip.addEventListener('mouseenter', () => clearInterval(quoteTimer));
+      strip.addEventListener('mouseleave', startQuoteTimer);
+    }
+  }
+
+  /* =====================================================
+     SUBTLE PARALLAX on Hero layers
+     ===================================================== */
+  const heroStars  = document.querySelector('.hero-stars');
+  const heroAurora = document.querySelector('.hero-aurora');
+  const heroPinesF = document.querySelector('.hero-pines-far');
+  const heroContent = document.querySelector('.hero-content');
+
+  if (heroStars && 'IntersectionObserver' in window) {
+    function applyParallax() {
+      const scrollY = window.scrollY;
+      const heroEl  = document.querySelector('.hero');
+      if (!heroEl) return;
+      const heroH = heroEl.offsetHeight;
+      if (scrollY > heroH) return;
+
+      const p = scrollY / heroH; // 0 to 1
+
+      if (heroStars)   heroStars.style.transform   = 'translateY(' + (scrollY * 0.25).toFixed(1) + 'px)';
+      if (heroAurora)  heroAurora.style.transform  = 'translateY(' + (scrollY * 0.15).toFixed(1) + 'px)';
+      if (heroPinesF)  heroPinesF.style.transform  = 'translateY(' + (scrollY * 0.08).toFixed(1) + 'px)';
+      if (heroContent) heroContent.style.transform = 'translateY(' + (scrollY * 0.30).toFixed(1) + 'px)';
+    }
+
+    window.addEventListener('scroll', applyParallax, { passive: true });
+  }
+
 })();

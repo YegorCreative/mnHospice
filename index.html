@@ -21,11 +21,11 @@
       </a>
       <nav class="main-nav" aria-label="Main navigation">
         <ul class="nav-list">
-          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#about"    class="nav-link">About</a></li>
+          <li><a href="#values"   class="nav-link">Our Values</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#team" class="nav-link">Our Team</a></li>
-          <li><a href="#stories" class="nav-link">Stories</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#stories"  class="nav-link">Stories</a></li>
+          <li><a href="#contact"  class="nav-link">Contact</a></li>
         </ul>
       </nav>
       <a href="#give" class="btn btn-primary nav-cta">Give Now</a>
@@ -35,23 +35,52 @@
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
+  <!-- ===== HERO — Minnesota Lake at Dawn ===== -->
   <section class="hero" id="home">
-    <div class="hero-overlay"></div>
+    <!-- Atmospheric layers -->
+    <div class="hero-stars"    aria-hidden="true"></div>
+    <div class="hero-aurora"   aria-hidden="true"></div>
+    <div class="hero-mist"     aria-hidden="true"></div>
+    <!-- Pine silhouettes (far then near) -->
+    <div class="hero-pines-far"  aria-hidden="true"></div>
+    <div class="hero-pines-near" aria-hidden="true"></div>
+
     <div class="container hero-content">
-      <p class="hero-eyebrow">Compassionate Care Across Minnesota</p>
-      <h1 class="hero-headline">Every Moment<br/>Deserves Dignity.</h1>
-      <p class="hero-sub">We walk alongside patients and families during life's most sacred journey — with comfort, respect, and unwavering support.</p>
+      <p class="hero-eyebrow">Minnesota Hospice Care</p>
+      <h1 class="hero-headline">
+        Where<br/>
+        Minnesota<br/>
+        Care Lives.
+      </h1>
+      <p class="hero-sub">Rooted in the north. Devoted to families navigating life's most sacred passage &mdash; with the quiet strength, honest warmth, and deep community that define who we are as Minnesotans.</p>
       <div class="hero-actions">
-        <a href="#give" class="btn btn-primary btn-lg">Make a Gift</a>
-        <a href="#services" class="btn btn-outline btn-lg">Our Services</a>
+        <a href="#give"     class="btn btn-sunrise btn-lg">Make a Gift</a>
+        <a href="#services" class="btn btn-outline  btn-lg">Our Services</a>
       </div>
+    </div>
+
+    <!-- Wave transition -->
+    <div class="hero-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,40 C240,70 480,10 720,40 C960,70 1200,15 1440,40 L1440,70 L0,70 Z" fill="#0c2240"/>
+      </svg>
     </div>
     <div class="hero-scroll-hint" aria-hidden="true">
       <span>Scroll</span>
       <div class="scroll-line"></div>
     </div>
   </section>
+
+  <!-- ===== QUOTE STRIP ===== -->
+  <div class="quote-strip" role="region" aria-label="Minnesota care philosophy">
+    <div class="container quote-strip-inner">
+      <span class="quote-strip-leaf" aria-hidden="true">&#10022;</span>
+      <div class="quote-rotator" id="quoteRotator">
+        <p class="quote-strip-text" id="quoteText" aria-live="polite">Like Minnesota&#39;s 10,000 lakes &mdash; calm, clear, and always there for you.</p>
+      </div>
+      <div class="quote-dots" id="quoteDots" aria-hidden="true"></div>
+    </div>
+  </div>
 
   <!-- ===== TRUST BAR ===== -->
   <div class="trust-bar">
@@ -81,27 +110,90 @@
   <!-- ===== ABOUT ===== -->
   <section class="section about" id="about">
     <div class="container about-grid">
-      <div class="about-visual">
+      <div class="about-visual reveal">
         <div class="about-image-wrap">
-          <div class="about-img-placeholder" aria-label="Compassionate hospice care team"></div>
+          <!-- CSS Minnesota sunset-over-lake scene; swap for real photo when ready -->
+          <div class="about-scene" role="img" aria-label="Minnesota sunset over a peaceful lake with pine trees">
+            <div class="scene-sky"></div>
+            <div class="scene-water"></div>
+            <div class="scene-trees"></div>
+          </div>
           <div class="about-badge">
             <span class="badge-number">Est.</span>
             <span class="badge-year">1994</span>
           </div>
         </div>
       </div>
-      <div class="about-copy">
+      <div class="about-copy reveal reveal-delay-1">
         <p class="section-eyebrow">Who We Are</p>
-        <h2 class="section-title">Care That Centers<br/>the Whole Person.</h2>
-        <p class="section-body">Minnesota Hospice Care is a nonprofit organization dedicated to providing expert medical care, emotional support, and spiritual guidance to individuals nearing the end of life — and to the families who love them.</p>
-        <p class="section-body">Our interdisciplinary teams serve patients in their homes, nursing facilities, and assisted living communities across the Twin Cities metro and greater Minnesota.</p>
-        <a href="#services" class="btn btn-secondary">See What We Offer</a>
+        <h2 class="section-title">Care That Feels<br/>Like Home.</h2>
+        <p class="section-body">Minnesota Hospice Care is a nonprofit organization born from Minnesota&rsquo;s deep tradition of looking after one another. Since 1994, we&rsquo;ve walked alongside patients and families during life&rsquo;s most sacred passage &mdash; bringing the same honest, neighbor-first care that defines this state.</p>
+        <p class="section-body">Our interdisciplinary teams serve patients in their homes, nursing facilities, and assisted living communities across the Twin Cities metro and greater Minnesota &mdash; wherever home is.</p>
+        <a href="#services" class="btn btn-lake-outline">See What We Offer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MINNESOTA VALUES ===== -->
+  <section class="section mn-values" id="values">
+    <div class="container">
+      <div class="section-header centered reveal">
+        <p class="section-eyebrow">Our Foundation</p>
+        <h2 class="section-title">Rooted in<br/>Minnesota Values</h2>
+        <p class="section-intro">The land shapes the people. Our care reflects the best of what it means to call Minnesota home.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 8 L25 30 H31 L24 50 H42 L35 30 H41 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <line x1="32" y1="50" x2="32" y2="60" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Quiet Strength</h3>
+          <p class="value-desc">The north woods don&rsquo;t shout. Neither do we. Our care speaks through unwavering, steady presence &mdash; through every season of the journey.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-1">
+          <div class="value-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="32" cy="40" rx="26" ry="10" fill="currentColor" opacity="0.12"/>
+              <path d="M8 38 Q20 28 32 36 Q44 44 56 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M10 44 Q22 34 32 42 Q42 50 54 42" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.45"/>
+              <circle cx="32" cy="18" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Still Waters</h3>
+          <p class="value-desc">Like Minnesota&rsquo;s 10,000 lakes, we bring calm to the hardest moments. Our presence is a peaceful anchor for families in the storm.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+          <div class="value-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 40 C20 34 12 32 12 24 C12 16 18 10 26 10 C30 10 34 12 36 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M40 20 C48 20 52 26 52 32 C52 40 46 44 40 44 H24 C18 44 14 40 14 34 C14 30 16 26 20 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M28 34 L32 38 L40 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Neighbor Care</h3>
+          <p class="value-desc">Before care systems, there were neighbors. We carry that tradition &mdash; the genuine, roll-up-your-sleeves Minnesota way of showing up when it matters most.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-3">
+          <div class="value-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="18" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              <path d="M32 14 V18 M32 46 V50 M14 32 H18 M46 32 H50" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M32 32 L38 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="32" cy="32" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Four Seasons</h3>
+          <p class="value-desc">Through spring&rsquo;s hope, summer&rsquo;s fullness, autumn&rsquo;s beauty, and winter&rsquo;s peace &mdash; we walk with every family through every season of the final journey.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== SERVICES ===== -->
-  <section class="section services bg-soft" id="services">
+  <section class="section services bg-birch" id="services">
     <div class="container">
       <div class="section-header centered">
         <p class="section-eyebrow">What We Provide</p>
@@ -155,6 +247,28 @@
     </div>
   </section>
 
+  <!-- ===== FEATURE QUOTE ===== -->
+  <section class="quote-feature" aria-label="Core philosophy">
+    <div class="qf-overlay" aria-hidden="true"></div>
+    <div class="qf-pines"   aria-hidden="true"></div>
+    <div class="container qf-inner">
+      <figure class="qf-figure reveal">
+        <div class="qf-leaf" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4 C16 10 8 20 8 32 C8 40 14 46 24 46 C34 46 40 40 40 32 C40 20 32 10 24 4 Z" fill="currentColor" opacity="0.25"/>
+            <line x1="24" y1="4" x2="24" y2="46" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <path d="M24 20 C20 16 12 18 10 24 C14 24 20 22 24 20 Z" fill="currentColor" opacity="0.5"/>
+            <path d="M24 30 C28 26 36 28 38 34 C34 34 28 32 24 30 Z" fill="currentColor" opacity="0.5"/>
+          </svg>
+        </div>
+        <blockquote class="qf-quote">
+          Every ending deserves the quiet dignity of a Minnesota sunset &mdash; golden, peaceful, and complete.
+        </blockquote>
+        <figcaption class="qf-attribution">&mdash; Minnesota Hospice Care</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <!-- ===== STORIES / TESTIMONIALS ===== -->
   <section class="section stories" id="stories">
     <div class="container">
@@ -163,25 +277,28 @@
         <h2 class="section-title">What Families Are Saying</h2>
       </div>
       <div class="stories-grid">
-        <figure class="story-card">
-          <blockquote class="story-quote">"The team from Minnesota Hospice gave my mother the peace and dignity she deserved in her final weeks. We couldn't have done it without them."</blockquote>
+        <figure class="story-card reveal">
+          <p class="story-state">Minneapolis, MN</p>
+          <blockquote class="story-quote">&ldquo;The team from Minnesota Hospice gave my mother the peace and dignity she deserved in her final weeks. They never felt like strangers &mdash; they felt like neighbors.&rdquo;</blockquote>
           <figcaption class="story-author">
-            <span class="author-name">— Sandra T.</span>
-            <span class="author-role">Family Member, Minneapolis</span>
+            <span class="author-name">Sandra T.</span>
+            <span class="author-role">Family member, Minneapolis</span>
           </figcaption>
         </figure>
-        <figure class="story-card story-card--featured">
-          <blockquote class="story-quote">"Every nurse, every aide, every chaplain — they all treated my father as a whole person. The care was exceptional from day one."</blockquote>
+        <figure class="story-card story-card--featured reveal reveal-delay-1">
+          <p class="story-state story-state--light">St. Paul, MN</p>
+          <blockquote class="story-quote">&ldquo;Every nurse, every aide, every chaplain treated my father as a whole person. We felt the Minnesota community spirit in every single visit.&rdquo;</blockquote>
           <figcaption class="story-author">
-            <span class="author-name">— James &amp; Rachel K.</span>
-            <span class="author-role">Family Members, St. Paul</span>
+            <span class="author-name">James &amp; Rachel K.</span>
+            <span class="author-role">Family members, St. Paul</span>
           </figcaption>
         </figure>
-        <figure class="story-card">
-          <blockquote class="story-quote">"Knowing someone was just a phone call away at 3am was everything. They made an impossibly hard time a little more bearable."</blockquote>
+        <figure class="story-card reveal reveal-delay-2">
+          <p class="story-state">Duluth, MN</p>
+          <blockquote class="story-quote">&ldquo;Knowing someone was just a phone call away at 3am &mdash; even in a January blizzard &mdash; was everything. They made the impossible a little more bearable.&rdquo;</blockquote>
           <figcaption class="story-author">
-            <span class="author-name">— Maria G.</span>
-            <span class="author-role">Family Member, Duluth</span>
+            <span class="author-name">Maria G.</span>
+            <span class="author-role">Family member, Duluth</span>
           </figcaption>
         </figure>
       </div>
@@ -190,19 +307,20 @@
 
   <!-- ===== GIVE / DONATE ===== -->
   <section class="section give" id="give">
-    <div class="give-overlay"></div>
+    <div class="give-pines" aria-hidden="true"></div>
     <div class="container give-inner">
-      <div class="give-copy">
+      <div class="give-copy reveal">
         <p class="section-eyebrow light">Make a Difference</p>
-        <h2 class="section-title light">Your Gift Brings<br/>Comfort Home.</h2>
-        <p class="section-body light">Every donation — no matter the size — directly supports the patients and families who rely on our care. Your generosity funds nursing visits, spiritual support, bereavement counseling, and so much more.</p>
+        <h2 class="section-title light">Your Gift Keeps<br/>Minnesota Care<br/>Alive.</h2>
+        <p class="section-body light">Every donation &mdash; no matter the size &mdash; directly supports the patients and families who rely on our care. In a state that looks after its own, your generosity funds nursing visits, spiritual support, bereavement counseling, and so much more.</p>
         <ul class="give-impact-list">
-          <li><span class="impact-amount">$25</span> <span class="impact-desc">provides comfort supplies for one patient</span></li>
-          <li><span class="impact-amount">$100</span> <span class="impact-desc">funds a full day of volunteer support</span></li>
-          <li><span class="impact-amount">$500</span> <span class="impact-desc">covers one week of bereavement counseling</span></li>
+          <li><span class="impact-amount">$25</span><span class="impact-desc">provides comfort supplies for one patient</span></li>
+          <li><span class="impact-amount">$100</span><span class="impact-desc">funds a full day of volunteer support</span></li>
+          <li><span class="impact-amount">$500</span><span class="impact-desc">covers one week of bereavement counseling</span></li>
         </ul>
+        <p class="give-pull-quote">&ldquo;In Minnesota, we take care of our own. That&rsquo;s not just a value &mdash; it&rsquo;s a way of life.&rdquo;</p>
       </div>
-      <div class="give-form-wrap">
+      <div class="give-form-wrap reveal reveal-delay-2">
         <div class="give-form-card">
           <h3 class="form-title">Give Today</h3>
           <div class="amount-selector" id="amountSelector">
@@ -243,7 +361,7 @@
               <label for="dedication">In Honor / Memory of <span class="optional">(optional)</span></label>
               <input type="text" id="dedication" name="dedication" placeholder="Name of loved one" />
             </div>
-            <button type="submit" class="btn btn-primary btn-full">
+            <button type="submit" class="btn btn-sunrise btn-full">
               <span class="btn-text">Donate Now</span>
               <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
@@ -255,7 +373,7 @@
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section class="section contact bg-soft" id="contact">
+  <section class="section contact bg-birch" id="contact">
     <div class="container contact-grid">
       <div class="contact-info">
         <p class="section-eyebrow">Reach Out</p>
@@ -315,13 +433,15 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
+    <div class="footer-pines" aria-hidden="true"></div>
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="logo logo--light">
           <span class="logo-icon">&#9829;</span>
           <span class="logo-text">Minnesota Hospice<span class="logo-sub">Care</span></span>
         </a>
-        <p class="footer-tagline">Compassionate care for every journey.</p>
+        <p class="footer-tagline">Rooted in the north.<br/>Devoted to every season of life.</p>
+        <p class="footer-state">&#9733;&nbsp;St.&nbsp;Paul,&nbsp;Minnesota</p>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <div class="footer-nav-col">
